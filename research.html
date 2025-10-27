@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research | Aohua Tian</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<!-- ===== Modal Template ===== -->
+<div id="imgModal" class="modal" onclick="closeModal(event)">
+    <span class="close-modal" onclick="closeModal(event)">&times;</span>
+    <img id="modalImg" class="modal-content" alt="Expanded research image" />
+    <div id="modalCaption" class="modal-caption"></div>
+</div>
+
+<!-- Link to external JS -->
+<script src="js/modal.js"></script>
+
+
+<body>
+    <!-- Skip link -->
+    <a class="skip" href="#main">Skip to Main Content</a>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header>
+        <nav aria-label="Main navigation">
+            <h1 class="logo">Aohua <span class="hide-mobile">Tian</span></h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" aria-current="page">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main">
+
+        <!-- === Research Overview Section === -->
+        <section class="hero" aria-labelledby="overview-heading">
+            <div class="intro-text" data-aos="fade-up">
+                <h2 id="overview-heading">Research Overview</h2>
+                <p>
+                    My research lies at the intersection of <strong>Geospatial Artificial Intelligence (GeoAI)</strong>,
+                    <strong>Vision–Language Models (VLMs)</strong>, and <strong>Urban Sustainability</strong>.
+                    I explore how multimodal data—including imagery, text, and spatial data—can help understand
+                    urban perception, environmental quality, and human–environment interaction.
+                </p>
+                <p>
+                    I currently focus on developing interpretable and responsible AI systems for real-world geospatial
+                    applications.
+                </p>
+            </div>
+        </section>
+
+        <!-- === Major Research Projects Section === -->
+        <section class="research-interests" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Major Research Projects</h2>
+            <p class="section-desc">
+                Selected projects based on my current and recent work in GeoAI, multimodal learning, and open-source
+                urban analytics.
+            </p>
+
+            <div class="interest-grid">
+                <!-- Project 1: Soundscape perception with visual–spatial metrics (Detroit) -->
+                <figure data-aos="fade-up">
+                    <img src="images/project_soundscape.png"
+                        alt="Pipeline of Detroit street sampling with street view, spatial datasets, viewscape metrics, pair-wise survey, and GAM models A/B." />
+                    <figcaption>
+                        <strong>Perceived Soundscape Modeling from Visual–Spatial Metrics in Detroit</strong><br />
+                        We model perceived soundscapes by linking <em>visual–spatial metrics</em> from street-view
+                        imagery and spatial data
+                        with <em>human perceptions</em> of urban acoustics.
+                        Using Detroit as a case study, we extract image features and <em>viewscape metrics</em> to
+                        represent the visual context,
+                        and fit non-linear <strong>GAMs</strong> to relate these spatial features to affective responses
+                        (eventfulness and pleasantness).
+                    </figcaption>
+
+                </figure>
+
+                <!-- Project 2: Urban blight with VLMs (Detroit) -->
+                <figure data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/project_blight_vlm_detroit.png"
+                        alt="Detroit housing blight mapping from multi-view street images via VLMs and an ensemble learner." />
+                    <figcaption>
+                        <strong>Identifying and Mapping Urban Blight in Detroit Using Vision–Language
+                            Models</strong><br />
+                        A scalable framework using open-source large VLMs with <em>multi-view street images</em> to
+                        assess residential housing conditions in Detroit.
+                        Structured prompts guided models to evaluate <em>roof integrity</em>, <em>wall damage</em>, and
+                        <em>boarded openings</em>.
+                        Ensemble learning (e.g., XGBoost stacking) improved robustness and accuracy across all
+                        conditions.
+                        This approach enables <em>low-cost, regularly updatable</em> tracking of urban blight as a
+                        complement to traditional field surveys.
+                    </figcaption>
+
+                </figure>
+
+                <!-- Project 3: Multimodal LLMs + deep vision comparative study (Zibo vs Ann Arbor) -->
+                <figure data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/project_multimodal_semantics_zibo_annarb.png"
+                        alt="Comparative multimodal pipeline for Zibo and Ann Arbor integrating SVI+GPS, segmentation, LLM-based descriptions, fusion, and validation." />
+                    <figcaption>
+                        <strong>Integrating Multimodal LLMs and Deep Learning for Urban Spatial Semantic
+                            Analysis</strong><br />
+                        We develop a multimodal framework that integrates <em>street-level imagery</em>, <em>deep vision
+                            segmentation</em>, and
+                        <em>language-based interpretation</em> to analyze urban livability.
+                        A comparative study between <strong>Zibo</strong> and <strong>Ann Arbor</strong> examines how
+                        visual and textual features
+                        reflect differences in walkability, safety, and comfort across urban contexts.
+                    </figcaption>
+
+                </figure>
+
+                <!-- Project 4: Urban-Worm library -->
+                <figure data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/urbanworm.png"
+                        alt="Urban-Worm Python library architecture connecting remote sensing, street view APIs, VLM inference, and urban condition outputs." />
+                    <figcaption>
+                        <strong>Urban-Worm: Open-Source GeoAI Library for Urban Environment Assessment</strong><br />
+                        <em>Urban-Worm</em> is a Python library that integrates <em>remote sensing imagery</em>,
+                        <em>street-view data</em>, and
+                        <em>vision–language models</em> to assess urban units. The package provides APIs for data
+                        collection and VLM-based inference,
+                        supporting automated evaluation of <em>roof integrity</em>, <em>structural condition</em>,
+                        <em>broken/boarded openings</em>,
+                        <em>landscape quality</em>, and <em>urban perception</em>. It is designed for scalable,
+                        repeatable urban analytics workflows.
+                        <a href="https://github.com/billbillbilly/urbanworm" target="_blank" rel="noopener">View Project
+                            on GitHub</a>.
+                    </figcaption>
+                </figure>
+
+                <!-- Project 5: Wetland Loss Analysis -->
+                <figure data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/project_wetland.png"
+                        alt="Infographic showing spatial patterns of wetland loss across China and grid-based GWR modeling workflow." />
+                    <figcaption>
+                        <strong>Multi-Scale Spatiotemporal Wetland Loss and Its Influencing Factors in
+                            China</strong><br />
+                        We quantify two decades of <em>wetland loss</em> across China and analyze key drivers using an
+                        innovative
+                        <strong>Grid-GWR-CUDA</strong> framework.
+                        The model integrates <em>natural factors</em> (e.g., precipitation, elevation, slope) and
+                        <em>socioeconomic variables</em> (e.g., population, GDP, distance to cities/roads) to reveal
+                        spatial heterogeneity
+                        in wetland decline.
+                        GPU-accelerated computation enables fine-resolution modeling and efficient national-to-regional
+                        analysis,
+                        highlighting human activities as the dominant cause of loss.
+                        <a href="https://doi.org/10.1016/j.ecolind.2023.110144" target="_blank" rel="noopener">
+                            Read Paper
+                        </a>.
+                    </figcaption>
+                </figure>
+
+
+                <!-- Project 6: Glacier Melting Analysis -->
+                <figure data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/project_glacierai.png"
+                        alt="Infographic showing glacier melting clusters across Tibet and SHAP-based machine learning interpretation." />
+                    <figcaption>
+                        <strong>Spatial Heterogeneity of Glacier Melting in Tibet Using K-means and
+                            XGBoost–SHAP</strong><br />
+                        We investigate <em>glacier melting patterns</em> across the Tibetan Plateau using
+                        <strong>K-means clustering</strong> and <strong>XGBoost–SHAP</strong> modeling.
+                        The workflow identifies three distinct glacier clusters driven by <em>temperature</em>,
+                        <em>sunshine hours</em>, <em>evapotranspiration</em>, and <em>terrain factors</em>.
+                        SHAP interpretation quantifies each feature’s contribution, revealing the dominant role
+                        of surface temperature and solar radiation in driving regional melting heterogeneity.
+                        <a href="https://doi.org/10.1016/j.envsoft.2024.106194" target="_blank" rel="noopener">
+                            Read Paper
+                        </a>.
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- === Research Impact Section === -->
+        <section class="research-interests" aria-labelledby="impact-heading">
+            <h2 id="impact-heading">Research Impact</h2>
+            <p class="section-desc">
+                My work advances explainable and responsible GeoAI by linking multimodal urban data with human
+                perception.
+                The resulting tools and frameworks support scalable, updatable, and human-aligned analytics for planners
+                and policymakers.
+            </p>
+            <div class="hero-buttons" style="text-align:center;">
+                <a class="btn" href="publications.html">View Publications</a>
+                <a class="btn secondary" href="https://github.com/Ellen-Tian" target="_blank" rel="noopener">View on
+                    GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2025 Aohua Tian | Built with HTML & CSS | Accessible Design Following WCAG 2.1 AA</p>
+        <ul class="social">
+            <li>
+                <a href="https://www.linkedin.com/in/aohua-tian-aa82a1351/" target="_blank"
+                    aria-label="LinkedIn Profile" rel="noopener">
+                    <img src="images/icons/linkedin.svg" alt="LinkedIn icon" />
+                </a>
+            </li>
+            <li>
+                <a href="https://scholar.google.com/citations?user=6PaeZrUAAAAJ&hl=en&oi=ao" target="_blank"
+                    aria-label="Google Scholar Profile" rel="noopener">
+                    <img src="images/icons/scholar.svg" alt="Google Scholar icon" />
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
